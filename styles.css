@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,600;1,700&display=swap');
+
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Oxygen, sans-serif;
+    overflow-x: hidden;
+}
+body{
+    background-color: var(--back-color);
+    font-size: 10px;
+}
+
+:root{
+    --back-color: #CEF2FF;
+    --accent-color: #0065EC;
+    --secondary-color: #634E4D;
+}
+
+header{
+    background-color: var(--accent-color);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+li{
+list-style: none;
+    padding: 0 10px;
+    font-size: 2.2rem;
+}
+
+h1{
+    font-family: "Source Sans Pro", serif;
+    font-weight: 600;
+    font-size: 10rem;
+    color: var(--accent-color);
+}
+
+nav{
+    width: 100%;
+    color: white;
+    font-weight: 400;
+    display: flex;
+    padding: 0 10px;
+    position: relative;
+}
+
+ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--back-color);
+}
+
+p{
+    word-break: break-word;
+    line-height: 1.5em;
+    color: var(--secondary-color);
+    font-size: 2.2rem;
+}
+
+main{
+    position: relative;
+    width: 100%;
+    margin: 5px 80px;
+}
+
+.description p{
+    margin-top: 50px;
+    width: 65%;
+}
+
+.description{
+    position: relative;
+    display: block;
+    margin: 20px 0;
+}
+
+img{
+    position: absolute;
+    left: 56%;
+    margin-right: 20px;
+    top: 80px;
+    width: 35%;
+}
