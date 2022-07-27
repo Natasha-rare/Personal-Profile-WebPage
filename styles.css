@@ -17,25 +17,26 @@ html{
     box-sizing: border-box;
     font-size: 62.5%;
     scroll-behavior: smooth;
+    transition: font-size 1s linear;
 }
 /* 1200px / 16px = 75em */
 @media (max-width: 75em) {
     html {
-        font-size: 60%;
+        font-size: 55%;
     }
 }
 
 /* 980px / 16px = 61.25em */
 @media (max-width: 61.25em) {
     html {
-        font-size: 58%;
+        font-size: 53%;
     }
 }
 
 /* 460px / 16px = 28.75em */
 @media (max-width: 28.75em) {
     html {
-        font-size: 55%;
+        font-size: 50%;
     }
 
 }
@@ -58,7 +59,11 @@ h1{
     font-size: 9.8rem;
     color: var(--accent-color);
 }
-
+h2{
+    color: var(--accent-color);
+    padding-top: 30px;
+    font-size: 3.5em;
+}
 nav{
     color: white;
     font-weight: 400;
@@ -91,7 +96,7 @@ nav a:hover{
     color: var(--back-color);
 }
 
-p{
+#welcome-section p{
     word-break: break-word;
     line-height: 1.5em;
     color: var(--secondary-color);
@@ -108,9 +113,9 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    height: 100vh;
+    height: 80vh;
+    margin-bottom: 8%;
     width: 100%;
-    padding-left: 5%;
 }
 
 #welcome-section{
@@ -119,16 +124,21 @@ p{
     justify-content: center;
     align-items: center;
     width: 100%;
+    transition: justify-content 2s ease-in-out;
 }
 
 .img{
     position: absolute;
     top: 100px;
-    right: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
     z-index: -10;
 }
 
-#projects, #contact{
+#projects, #contact, footer, #welcome-section{
     padding: 0 5%;
 }
 
@@ -143,6 +153,7 @@ p{
 
 .avatar{
     width: 580px;
+    transition: opacity 1s  linear;
 }
 
 .project-tile p{
@@ -185,18 +196,19 @@ img{
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    height: 60vh;
+    height: 50vh;
     width: 100%;
     font-size: 4rem;
-    margin: 10px 0 ;
+    margin: 0 0 0 5px;
     color: var(--secondary-color);
     overflow-x: visible;
+    transition: flex-direction 1s linear;
 }
 .flex-container a{
     display: inline-block;
     transition: transform 0.3s ease-out;
-    margin: 5px;
 }
+
 .flex-container a:hover{
     transform: scale(2);
 }
@@ -209,6 +221,22 @@ i{
     font-style: normal;
 }
 
+footer{
+    background-color: var(--secondary-color);
+    height: 10vh;
+    color: white;
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer blockquote{
+    margin-right: 10px;
+}
+footer p{    word-break: break-all;
+}
 
 @media (max-width: 30.625em) {
     #projects {
@@ -218,12 +246,28 @@ i{
         grid-template-columns: 1fr;
     }
 
-    .flex-container{
+    .flex-container, footer{
         flex-direction: column;
     }
+    footer{justify-content: space-between;
+    text-align: center;
+    height: 15vh;
+    padding: 2px 0}
 }
+
 @media (max-width: 61.25em) {
-    .flex-container i{
-        content: none;
+
+    #welcome-section p{
+        text-align: justify;
+        width: 100%;
+    }
+
+    #welcome-section .img{
+        justify-content: center;
+    }
+
+    #welcome-section .avatar{
+        width: 400px;
+        opacity: 0.5;
     }
 }
