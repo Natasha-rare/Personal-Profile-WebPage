@@ -37,6 +37,7 @@ html{
     html {
         font-size: 55%;
     }
+
 }
 
 :root{
@@ -112,7 +113,7 @@ p{
     padding-left: 5%;
 }
 
-#about{
+#welcome-section{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -127,7 +128,7 @@ p{
     z-index: -10;
 }
 
-#works{
+#projects, #contact{
     padding: 0 5%;
 }
 
@@ -144,12 +145,12 @@ p{
     width: 580px;
 }
 
-.work_card p{
+.project-tile p{
     font-size: 2.5em;
     color: var(--secondary-color);
 }
 
-.work_card{
+.project-tile{
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -159,7 +160,7 @@ p{
     border-radius: 5px;
 }
 
-.work_card img{
+.project-tile img{
     width: 100%;
     height: calc(100% - 6.8rem);
     object-fit: cover;
@@ -169,18 +170,60 @@ img{
     display: block;
 }
 
+
+#projects a{
+    text-decoration: none;
+}
+
+#projects a:hover p{
+    color: var(--accent-color);
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 60vh;
+    width: 100%;
+    font-size: 4rem;
+    margin: 10px 0 ;
+    color: var(--secondary-color);
+    overflow-x: visible;
+}
+.flex-container a{
+    display: inline-block;
+    transition: transform 0.3s ease-out;
+    margin: 5px;
+}
+.flex-container a:hover{
+    transform: scale(2);
+}
+
+i{
+    font-size: 5rem;
+    padding: 2px;
+    width: 100%;
+    color: var(--secondary-color);
+    font-style: normal;
+}
+
+
 @media (max-width: 30.625em) {
-    #works {
+    #projects {
         padding: 6rem 1rem;
     }
     .container {
         grid-template-columns: 1fr;
     }
-}
-#works a{
-    text-decoration: none;
-}
 
-#works a:hover p{
-    color: var(--accent-color);
+    .flex-container{
+        flex-direction: column;
+    }
+}
+@media (max-width: 61.25em) {
+    .flex-container i{
+        content: none;
+    }
 }
